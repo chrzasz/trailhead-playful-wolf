@@ -14,7 +14,18 @@
       <apex:column value="{!contact.Title}"/>
       <apex:column value="{!contact.Phone}"/>
    </apex:pageBlockTable>
-</apex:pageBlock>
+   </apex:pageBlock>
 
+   <apex:pageBlock title="Opportunities">
+      <apex:pageBlockTable value="{!Account.opportunities}" var="opportunity">
+         <apex:column value="{!opportunity.Name}"/>
+         <apex:column value="{!opportunity.Amount}"/>
+         <apex:column value="{!opportunity.ExpectedRevenue}"/>
+         <apex:column value="{!opportunity.CloseDate}"/>
+         <apex:column value="{!opportunity.StageName}"/>
+         <apex:column value="{!opportunity.DeliveryInstallationStatus__c}"/>
+         <apex:column value="{!opportunity.Description}"/>
+      </apex:pageBlockTable>
+   </apex:pageBlock>
     
 </apex:page>
