@@ -2,6 +2,7 @@
     <apex:form>
     
     <apex:pageBlock title="Edit Account">
+      <apex:pageMessages/>
       <apex:pageBlockSection columns="1">
          <apex:inputField value="{! Account.Name }"/>
          <apex:inputField value="{! Account.Phone }"/>        
