@@ -1,10 +1,26 @@
 <template>
-   <div>
-       <div>Name: {name}</div>
-       <div>Description: {description}</div>
-       <lightning-badge label={material}></lightning-badge>
-       <lightning-badge label={category}></lightning-badge>
-       <div>Price: {price}</div>
-       <div><img src={pictureUrl}/></div>
-   </div>
+    <div>
+        <div class="header">Available Bikes for {email}</header>
+        </div>
+        <div class="slds-text-heading_small">Name: {name}</div>
+        <div>Description: {description}</div>
+        <lightning-badge label={material}></lightning-badge>
+        <lightning-badge label={category}></lightning-badge>
+        <div class="price">Price: {price}</div>
+        <div><img src={pictureUrl} /></div>
+    </div>
+
+    <div>
+        <template if:true={contact.data}>
+            <div class="slds-m-around_medium">
+                <p>{name}</p>
+                <p>
+                    <lightning-formatted-phone value={phone}></lightning-formatted-phone>
+                </p>
+                <p>
+                    <lightning-formatted-email value={email}></lightning-formatted-email>
+                </p>
+            </div>
+        </template>
+    </div>
 </template>
